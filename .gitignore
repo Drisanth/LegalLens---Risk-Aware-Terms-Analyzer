@@ -87,3 +87,5 @@ Desktop.ini
 backend/temp.pdf
 backend/debug_check.py
 *.log
+
+Patent.md
