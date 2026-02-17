@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    body {
+      width: 350px;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #0f172a;
+      color: #f8fafc;
+      padding: 16px;
+    }
+    h1 {
+      font-size: 18px;
+      margin-top: 0;
+      color: #38bdf8;
+    }
+    .btn {
+      width: 100%;
+      padding: 10px;
+      background: linear-gradient(135deg, #0ea5e9, #2563eb);
+      color: white;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      font-weight: 600;
+    }
+    .btn:hover {
+      opacity: 0.9;
+    }
+    .result-card {
+      background: rgba(30, 41, 59, 0.7);
+      border: 1px solid rgba(148, 163, 184, 0.2);
+      border-radius: 8px;
+      padding: 12px;
+      margin-top: 12px;
+    }
+    .risk-score {
+      font-size: 24px;
+      font-weight: bold;
+      text-align: center;
+      margin: 10px 0;
+    }
+    .risk-high { color: #fb7185; }
+    .risk-medium { color: #facc15; }
+    .risk-low { color: #4ade80; }
+    
+    .clause-item {
+      font-size: 12px;
+      margin-bottom: 8px;
+      padding-bottom: 8px;
+      border-bottom: 1px solid rgba(255,255,255,0.1);
+    }
+    .loader {
+      text-align: center;
+      display: none;
+    }
+  </style>
+</head>
+<body>
+  <h1>LegalLens Analyzer</h1>
+  
+  <div id="initial-view">
+    <p>Analyze the current page for legal risks.</p>
+    <button id="analyze-btn" class="btn">Analyze Page</button>
+  </div>
+
+  <div id="loader" class="loader">
+    <p>Processing...</p>
+  </div>
+
+  <div id="results-view" style="display: none;">
+    <div class="result-card">
+      <div style="text-align: center; font-size: 12px; color: #cbd5e1;">Overall Risk Score</div>
+      <div id="risk-score-display" class="risk-score">0.0</div>
+    </div>
+    
+    <h3>Top High-Risk Clauses</h3>
+    <div id="clauses-list"></div>
+    
+    <button id="view-full-btn" class="btn" style="margin-top: 10px; background: #334155;">View Full Analysis</button>
+  </div>
+
+  <script src="popup.js"></script>
+</body>
+</html>

@@ -1,0 +1,17 @@
+fastapi>=0.100.0
+uvicorn>=0.23.0
+torch
+transformers==4.37.0
+networkx
+numpy
+scikit-learn
+python-multipart
+pdfminer.six
+beautifulsoup4
+requests
+jinja2
+pydantic>=2.0.0
+python-jose[cryptography]
+passlib[bcrypt]
+sentencepiece
+protobuf
